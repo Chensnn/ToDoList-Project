@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+i {
+  pointer-events: none;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(to bottom, #d8b08c, #d0be96, #c8caa6, #c4d5b9, #c6decd, #cde1d1, #d4e4d6, #dbe7db, #e3e6d8, #ebe4d7, #f1e3d9, #f4e2de);
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  color: #403f3d;
+  font-size: 3rem;
+  letter-spacing: 0.35rem;
+}
+header h1 .fi-bs-checkbox {
+  font-size: 2rem;
+  margin-left: 0.75em;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: 15vh;
+  }
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: initial;
+  }
+  header h1 .fi-bs-checkbox {
+    font-size: 1.35rem;
+    margin-left: 0.5em;
+  }
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+form input,
+form button {
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.7rem;
+  margin: 0.3rem;
+  box-shadow: 5px 5px 2px #1e232e;
+  border-radius: 5px;
+}
+form input[type=number] {
+  width: 90px;
+  text-align: center;
+}
+form input:focus {
+  outline: none;
+  font-size: 1.45rem;
+}
+form button {
+  cursor: pointer;
+  background-color: rgba(108, 125, 140, 0.5);
+  color: whitesmoke;
+  letter-spacing: 0.15rem;
+}
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    margin-top: 1rem;
+  }
+  form input,
+form button {
+    font-size: 0.75rem;
+    box-shadow: none;
+  }
+  form input[type=text] {
+    flex: 1 1 400px;
+    height: 5vh;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  form input:focus {
+    outline: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #cde1d1;
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section div.todo {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0rem;
+}
+section div.todo p {
+  background-color: white;
+  color: #403f3d;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.1s ease-in-out;
+}
+section div.todo p.todo-text {
+  width: 50vw;
+}
+section div.todo p.todo-time {
+  width: 20vw;
+  text-align: center;
+}
+section div.todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+}
+section div.todo button.complete {
+  background-color: #347355;
+}
+section div.todo button.trash {
+  background-color: #8c1f28;
+}
+
+@media screen and (max-width: 500px) {
+  section div.todo {
+    width: initial;
+  }
+  section div.todo p,
+section div.todo button {
+    font-size: 1.2rem;
+  }
+}
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+div.sort button {
+  cursor: pointer;
+  background-color: #c8caa6;
+  color: #403f3d;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  div.sort button {
+    font-size: 0.5rem;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    margin-bottom: 0.45rem;
+    margin-top: -1rem;
+  }
+}
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.15rem;
+}
+
+@-webkit-keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500;700&display=swap");
+@import url("https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css");
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+// 讓icon不會被點到
+i {
+  pointer-events: none;
+}
+html,
+body {
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #d8b08c,
+    #d0be96,
+    #c8caa6,
+    #c4d5b9,
+    #c6decd,
+    #cde1d1,
+    #d4e4d6,
+    #dbe7db,
+    #e3e6d8,
+    #ebe4d7,
+    #f1e3d9,
+    #f4e2de
+  );
+}
+
+$colorText: #403f3d;
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: $colorText;
+    font-size: 3rem;
+    letter-spacing: 0.35rem;
+    .fi-bs-checkbox {
+      font-size: 2rem;
+      margin-left: 0.75em;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  header {
+    height: 15vh;
+    h1 {
+      font-size: 2rem;
+      letter-spacing: initial;
+      .fi-bs-checkbox {
+        font-size: 1.35rem;
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  //   width: 60vw;
+  //   margin: auto;
+  input,
+  button {
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.7rem;
+    margin: 0.3rem;
+    box-shadow: 5px 5px 2px #1e232e;
+    border-radius: 5px;
+    // flex-grow: 1;
+  }
+  input[type="number"] {
+    width: 90px;
+    text-align: center;
+  }
+
+  input:focus {
+    outline: none;
+    font-size: 1.45rem;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgba(108, 125, 140, 0.5);
+    color: whitesmoke;
+    letter-spacing: 0.15rem;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    margin-top: 1rem;
+    input,
+    button {
+      font-size: 0.75rem;
+      box-shadow: none;
+    }
+    input[type="text"] {
+      flex: 1 1 400px;
+      height: 5vh;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    input:focus {
+      outline: none;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background-color: #cde1d1;
+    }
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.todo {
+    // width 寬度先不設定
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+
+    p {
+      background-color: white;
+      color: $colorText;
+      font-size: 1.5rem;
+      padding: 0.25rem 0.5rem;
+      transition: all 0.1s ease-in-out;
+    }
+    p.todo-text {
+      width: 50vw;
+    }
+    p.todo-time {
+      width: 20vw;
+      text-align: center;
+    }
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.5rem;
+      border: none;
+      cursor: pointer;
+      color: whitesmoke;
+    }
+    button.complete {
+      background-color: #347355;
+    }
+    button.trash {
+      background-color: #8c1f28;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  section {
+    div.todo {
+      width: initial;
+      p,
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+  button {
+    cursor: pointer;
+    background-color: #c8caa6;
+    color: $colorText;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  div.sort {
+    button {
+      font-size: 0.5rem;
+      width: 20vw;
+      height: 20vw;
+      border-radius: 50%;
+      margin-bottom: 0.45rem;
+      margin-top: -1rem;
+    }
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.15rem;
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}

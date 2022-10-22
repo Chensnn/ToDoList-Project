@@ -17,6 +17,10 @@ add.addEventListener("click", (e) => {
     alert("Please Enter Some Text.");
     return;
   }
+  if (todoMonth === "" || todoDate === "") {
+    alert("Please Enter number");
+    return;
+  }
 
   //建立List
   let todo = document.createElement("div");
@@ -96,6 +100,8 @@ add.addEventListener("click", (e) => {
 
   // click之後移除input
   form[0].value = "";
+  form[1].value = "";
+  form[2].value = "";
   section.appendChild(todo);
 });
 //=======================================================================================
